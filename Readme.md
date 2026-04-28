@@ -1,4 +1,4 @@
-# 🎬 MovieBase - Structured Data for Serials.
+# 🎬 MovieBase - Structured Data for Serials
 
 Desktop-приложение на **C++20 + Qt 6**, предназначенное для работы с базой сериалов:
 
