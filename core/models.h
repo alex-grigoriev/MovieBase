@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <string_view>
 #include <vector>
 #include <optional>
 
@@ -17,20 +16,28 @@ struct Movie {
     std::string title;
     int year{};
     int length{};
+    std::string poster_path;
     std::string slogan;
     std::string image;
     std::vector<Casting> cast;
 };
 
-struct MovieFilters {
-    int min_year = 0;
-    int max_year = 0;
-    int min_length = 0;
-    int max_length = 0;
+enum class SortField {
+    Title,
+    Year,
+    Length
 };
 
-enum class SortOrder { Asc, Desc };
+enum class SortOrder {
+    Asc,
+    Desc
+};
 
-enum class SortField { Title, Year, Length };
+struct MovieFilters {
+    int min_year{};
+    int max_year{};
+    int min_length{};
+    int max_length{};
+};
 
 } // namespace core
